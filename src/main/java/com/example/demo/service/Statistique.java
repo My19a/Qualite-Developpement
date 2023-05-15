@@ -30,5 +30,4 @@ public class Statistique {
         return new Echantillon(nombreDeVoitures, prixTotal/nombreDeVoitures);
     }
 
-
 }

@@ -1,10 +1,16 @@
 package com.example.demo.service;
 
 import com.example.demo.data.Voiture;
+import com.example.demo.data.VoitureRepository;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.util.Assert;
 
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 
@@ -31,4 +37,5 @@ public class ServiceTests {
         doNothing().when(statistique).ajouter(new Voiture("Porsche", 3000));
         when(statistique.prixMoyen()).thenReturn(new Echantillon(2, 2000));
     }
+
 }
