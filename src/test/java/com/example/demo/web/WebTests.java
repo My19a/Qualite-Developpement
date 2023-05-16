@@ -2,7 +2,7 @@ package com.example.demo.web;
 
 import com.example.demo.data.Voiture;
 import com.example.demo.service.Echantillon;
-import com.example.demo.service.Statistique;
+import com.example.demo.service.StatistiqueImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -25,7 +25,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 class WebTests {
 
 	@MockBean
-	Statistique statistique;
+	StatistiqueImpl statistiqueImpl;
 
 	@Autowired
 	MockMvc mockMvc;
@@ -48,8 +48,8 @@ class WebTests {
 
 	@Test
 	public void getStatistiques() throws Exception {
-		doNothing().when(statistique).ajouter(new Voiture("Ferrari", 5000));
-		when(statistique.prixMoyen()).thenReturn(new Echantillon(1, 5000));
+		doNothing().when(statistiqueImpl).ajouter(new Voiture("Ferrari", 5000));
+		when(statistiqueImpl.prixMoyen()).thenReturn(new Echantillon(1, 5000));
 		mockMvc.perform(get("/statistique"))
 			.andDo(print())
 			.andExpect(status().isOk())
