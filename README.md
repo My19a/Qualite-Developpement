@@ -4,9 +4,34 @@ Le but de ce cours est de faire des tests d'intégration au fur et à mesure que
 tout en vérifiant que les tests précédents continuent de passer sans relever d'erreur. 
 On appelle cela des tests de non regression.
 
+Un projet vous est fourni. Il contient du code Java. A vous d'écrire les programmes de tesd./
+
 ## Support de cours
 
 https://drive.google.com/drive/folders/1RVLc4yg5IKTq3OSht6wm1Cdjq9jOLEqy?usp=sharing
+
+# Appropriation du projet
+
+Vous devez vous appropier ce projet, c'est-à-dire que vous devez;
+
+- le déplacer vers un dépôt Git appartenant à vous ou votre binôme
+- inviter votre binôme à collaborer au projet 
+
+Pour cela commencer par cloner ce projet :
+```
+git clone https://github.com/charroux/testsLogiciel
+```
+
+Créez ensuite un projet vide dans un de vos compte Github et utiliser les instructions suivantes pour copier le projet vers votre comopte Github en indiquat le nom de votre repository dans l'instruction git remote.
+
+```
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/charroux/test1.git
+git push -u origin main
+```
 
 # TD 1 - JUnit
 
