@@ -117,7 +117,9 @@ https://github.com/charroux/testsLogiciel/blob/main/src/test/java/com/example/de
 
 ATTENTION ! PENSEZ BIEN A CODER LE PROGRAMME DE TEST DANS UN NOUVELLE BRANCHE COMME INDIQUÉ CI-DESSUS, puis faites une demande pull request.
 
+Les tests qui vont échoués seront affichés chez Github :
 
+<img src="images/build_failed.png" width="500"/>
 
 
 
