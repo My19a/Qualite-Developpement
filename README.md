@@ -49,11 +49,11 @@ Si les tests du développeurs sont concluants, le chef de projet peut alors déc
  Tous les développeurs doivent alors récupérer la mise à jour du code sur leur machine en faisant un git pull. 
 Et c'est là qu'on comprend le terme pull request qui est finalament une demande de pull faite par un développeur au chez de projet quand il a finit son travail.
 
-## Prmmier essai de pull request
+DES LORS QUE LE CODE EST TESTÉ SUR LES SERVEURS DE GITHUB, VOUS POUVEZ UTILISEZ N'IMPORTE QUEL ÉDITEUR DE TEXTE SUR VOTRE MACHINE POUR CODER.
+
+## Premier essai de pull request
 
 ### Launch a workflow when the code is updated
-
-The script is there: https://github.com/charroux/st2scl/blob/main/.github/workflows/acttions.yml
 
 Créer une nouvelle branche sur votre machine:
 ```
@@ -88,20 +88,6 @@ git pull origin main
 ```
 Sur toutes les machines des développeurs (y-compris celle du développeur qui a soumis son code) afin de mettre à jour la branche main sinon le serveur Github n'acceptera pas de nouveau push au pretexte que le code n'est pas à jour.
 
-
-Le code de ce script est dans 
-Create a Pull request on GitHub and follow the workflow.
-
-Merge the branch on Github is everything is OK.
-
-Then pull the new main version:
-
-```
-git checkout main
-```
-```
-git pull origin main
-```
 La nouvelle branche peut alors être effacée sur la machine du développeur est chez Github :
 
 ```
@@ -122,62 +108,20 @@ Etudier l'utilisation des assertions : https://junit.org/junit5/docs/current/use
 
 # TP 1 - JUnit
 
-Créer un projet avec Intellij :
+Dans ce TP vous allez écrire le programme de test d'une classe qui vous est donnée :
+https://github.com/charroux/testsLogiciel/blob/main/src/main/java/com/example/demo/data/Voiture.java
 
-<img src="images/projet.png" width="500"/>
+Etudiez cette classe et écrivez à la norme JUnit le programme de test. Une ébauche du programme de test ce trouve ici : 
 
-Attendre que le projet soit créé.
+https://github.com/charroux/testsLogiciel/blob/main/src/test/java/com/example/demo/data/VoitureTest.java
 
-Ajouter la librairie Jupiter (clic droit sur le projet -> Open Module Settings) : 
-
-<img src="images/librairie.png" width="500"/>
-
-Ajouter dans src deux dossiers (java pour les classes à tester et test pour les classes de test).
-
-Indiquer à Intellij que java est le dossier pour le code source et test celui pour les tests.
-
-<img src="images/dossier.png" width="500"/>
-
-Créer une classe Voiture dans le packe de src/main/Java.
-
-Ajoutez à cette classe les attributs :
-- une marque
-- un prix
-
-Créer une classe VoitureTest dans le package de src/test/Java et écrivez à la norme JUnit le code de test de la classe Voiture.
-
-Lancer le programme de test (clic droit sur la classe de test).
-
-## Sauvegarde de votre projet dans un dépôt Git vous appartenant
-
-Créer un projet dans votre compte Github.
-
-Poussez votre code vers votre dépôt git (en indiquant l'adresse de votre projet)
-
-<img src="images/pushExistingProjet.png" width="500"/>
-
-Indiquez l'adresse de votre projet dans le fichier dépots git : https://drive.google.com/drive/folders/1RVLc4yg5IKTq3OSht6wm1Cdjq9jOLEqy?usp=sharing
-
-## Codage d'une classe de service
-
-Coder une classe de service à partir l'interface (implanter l'interface: https://github.com/charroux/qualiteDeDeveloppement/blob/main/src/main/java/com/example/demo/service/Statistique.java
-
-Ecrivez la classe de test.
-
-# TP2
-
-Etudiez la technique de la matrice de test dans le cours sur les tests : https://drive.google.com/drive/folders/1RVLc4yg5IKTq3OSht6wm1Cdjq9jOLEqy?usp=sharing
-
-Etablir la matrice de tests.
-
-Ajouter à votre projet les tests définis dans la matrice de tests.
+ATTENTION ! PENSEZ BIEN A CODER LE PROGRAMME DE TEST DANS UN NOUVELLE BRANCHE COMME INDIQUÉ CI-DESSUS, puis faites une demande pull request.
 
 
 
 
 
-
-
+A REVOIR A PARTIR D"ICI.
 
 
 
