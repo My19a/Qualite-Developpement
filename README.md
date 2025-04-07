@@ -122,3 +122,21 @@ Les tests qui vont échoués seront affichés chez Github :
 <img src="images/build_failed.png" width="500"/>
 
 
+# TD 2 - Spring boot test et Mockito
+
+Etude du framework de test inclus dans les projets Spring boot : https://github.com/charroux/springbootest
+
+Etude du framework de test Mockito: https://github.com/charroux/mockito
+
+# TP 2
+
+## Présentation de l'application
+
+L'application développée sur la base des voitures calcule des statistiques sur les voitures. La base de cette application est une interface : 
+
+https://github.com/charroux/testsLogiciel/blob/main/src/main/java/com/example/demo/service/Statistique.java
+
+Son implantation et donnée : https://github.com/charroux/testsLogiciel/blob/main/src/main/java/com/example/demo/service/StatistiqueImpl.java
+
+Votre tâche consiste à écrire la classe de test en utilisant le framework Mockito : https://github.com/charroux/testsLogiciel/blob/main/src/test/java/com/example/demo/service/StatistiqueTests.java
+

@@ -11,5 +11,7 @@ import static org.mockito.Mockito.*;
 @SpringBootTest
 public class StatistiqueTests {
 
+    @MockBean
+    StatistiqueImpl statistiqueImpl;
 
 }
