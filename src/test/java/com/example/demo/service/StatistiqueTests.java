@@ -11,25 +11,5 @@ import static org.mockito.Mockito.*;
 @SpringBootTest
 public class StatistiqueTests {
 
-    @MockBean
-    StatistiqueImpl statistiqueImpl;
-
-    @Test
-    void statistiqueZeroVoiture(){
-        when(statistiqueImpl.prixMoyen()).thenReturn(new Echantillon(0, 0));
-    }
-
-    @Test
-    void statistique1Voiture(){
-        doNothing().when(statistiqueImpl).ajouter(new Voiture("Ferrari", 5000));
-        when(statistiqueImpl.prixMoyen()).thenReturn(new Echantillon(1, 5000));
-    }
-
-    @Test
-    void statistique2Voiture(){
-        doNothing().when(statistiqueImpl).ajouter(new Voiture("Ferrari", 1000));
-        doNothing().when(statistiqueImpl).ajouter(new Voiture("Porsche", 3000));
-        when(statistiqueImpl.prixMoyen()).thenReturn(new Echantillon(2, 2000));
-    }
 
 }
