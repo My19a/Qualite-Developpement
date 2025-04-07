@@ -136,6 +136,8 @@ L'application développée sur la base des voitures calcule des statistiques sur
 
 https://github.com/charroux/testsLogiciel/blob/main/src/main/java/com/example/demo/service/Statistique.java
 
+Cette interface utilise une classe Echantillon : https://github.com/charroux/testsLogiciel/blob/main/src/main/java/com/example/demo/service/Echantillon.java
+
 Son implantation et donnée : https://github.com/charroux/testsLogiciel/blob/main/src/main/java/com/example/demo/service/StatistiqueImpl.java
 
 Votre tâche consiste à écrire la classe de test en utilisant le framework Mockito : https://github.com/charroux/testsLogiciel/blob/main/src/test/java/com/example/demo/service/StatistiqueTests.java
