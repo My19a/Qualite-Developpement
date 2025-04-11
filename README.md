@@ -41,7 +41,7 @@ git remote remove origin
 
 et refaire le add remote.
 
-# Collaborer à un projet : le ccncept du pull request
+# Collaborer à un projet : le concept du pull request
 
 Quand un développeur collabore à un projet il porocède de la façon suivante : 
 
@@ -125,7 +125,7 @@ https://github.com/charroux/testsLogiciel/blob/main/src/test/java/com/example/de
 
 ATTENTION ! PENSEZ BIEN A CODER LE PROGRAMME DE TEST DANS UN NOUVELLE BRANCHE COMME INDIQUÉ CI-DESSUS, puis faites une demande pull request.
 
-Les tests qui vont échoués seront affichés chez Github :
+Les tests qui vont échouer seront affichés chez Github :
 
 <img src="images/build_failed.png" width="500"/>
 
