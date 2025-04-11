@@ -21,6 +21,7 @@ Pour cela commencer par cloner ce projet :
 ```
 git clone https://github.com/charroux/testsLogiciel
 ```
+Déplacez-vous dans le dossier du projet.
 
 Créez ensuite un projet vide dans un de vos compte Github et utiliser les instructions suivantes pour copier le projet vers votre comopte Github en indiquat le nom de votre repository dans l'instruction git remote.
 
