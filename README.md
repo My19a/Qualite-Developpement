@@ -33,6 +33,13 @@ git remote add origin https://github.com/charroux/test1.git
 git push -u origin main
 ```
 
+Si nécessaire supprimer le lien avec l'origine existante : 
+```
+git remote remove origin
+```
+
+et refaire le add remote.
+
 # Collaborer à un projet : le ccncept du pull request
 
 Quand un développeur collabore à un projet il porocède de la façon suivante : 
