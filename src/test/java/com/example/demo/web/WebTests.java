@@ -36,7 +36,7 @@ class WebTests {
             .andExcept(status().isOk())
             .andExcept(jsonPath("$.nombreDeVoitures").value("1"))
             .andExcept(jsonPath("$.prixMoyen").value("2000"))
-            .andReturn(());
+            .andReturn();
     }
 
 }
