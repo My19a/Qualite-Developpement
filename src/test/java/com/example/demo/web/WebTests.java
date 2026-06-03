@@ -33,9 +33,9 @@ class WebTests {
         when(statistiqueImpl.prixMoyen()).thenReturn(new Echantillon(1, 2000));
         mockMvc.perform(get("/statistique"))
             .andDo(print())
-            .andExcept(status().isOk())
-            .andExcept(jsonPath("$.nombreDeVoitures").value("1"))
-            .andExcept(jsonPath("$.prixMoyen").value("2000"))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.nombreDeVoitures").value("1"))
+            .andExpect(jsonPath("$.prixMoyen").value("2000"))
             .andReturn();
     }
 
