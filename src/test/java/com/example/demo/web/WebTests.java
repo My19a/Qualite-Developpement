@@ -14,7 +14,6 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static org.mockito.Mockito.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
-import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @SpringBootTest
@@ -28,15 +27,38 @@ class WebTests {
     MockMvc mockMvc;
 
     @Test
-    public void getStatistiques() throws Exception {
-        doNothing().when(statistiqueImpl).ajouter(new Voiture("Opel",2000));
-        when(statistiqueImpl.prixMoyen()).thenReturn(new Echantillon(1, 2000));
+    void getStatistiques() throws Exception {
+
+        when(statistiqueImpl.prixMoyen())
+                .thenReturn(new Echantillon(1, 2000));
+
         mockMvc.perform(get("/statistique"))
-            .andDo(print())
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$.nombreDeVoitures").value("1"))
-            .andExpect(jsonPath("$.prixMoyen").value("2000"))
-            .andReturn();
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.nombreDeVoitures").value(1))
+                .andExpect(jsonPath("$.prixMoyen").value(2000));
     }
 
+    @Test
+    void getStatistiquesSansVoiture() throws Exception {
+
+        when(statistiqueImpl.prixMoyen())
+                .thenThrow(new ArithmeticException());
+
+        mockMvc.perform(get("/statistique"))
+                .andExpect(status().isBadRequest());
+    }
+
+    @Test
+    void ajouterVoiture() throws Exception {
+
+        mockMvc.perform(post("/voiture")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("""
+                            {
+                                "marque":"Audi",
+                                "prix":7000
+                            }
+                            """))
+                .andExpect(status().isOk());
+    }
 }
